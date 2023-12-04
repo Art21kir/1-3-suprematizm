@@ -20,7 +20,7 @@ class Window(QMainWindow):
 
     def draw(self):
         R = randint(20, 100)
-        self.qp.setBrush(QColor(*[randint(0, 255) for _ in range(3)]))
+        self.qp.setBrush(QColor(255, 255, 0))
         self.qp.drawEllipse(150, 150, R, R)
 
     def paintEvent(self, event):
