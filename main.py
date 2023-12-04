@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui')
+        uic.loadUi('UI.ui', self)
         self.drawB.clicked.connect(self.draw)
 
     def draw(self):
