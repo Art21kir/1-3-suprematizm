@@ -6,7 +6,7 @@ from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 
-# *[randint(0, 255) for _ in range(3)]
+#
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -20,7 +20,7 @@ class Window(QMainWindow):
 
     def draw(self):
         R = randint(20, 100)
-        self.qp.setBrush(QColor(255, 255, 0))
+        self.qp.setBrush(QColor(*[randint(0, 255) for _ in range(3)]))
         self.qp.drawEllipse(150, 150, R, R)
 
     def paintEvent(self, event):
